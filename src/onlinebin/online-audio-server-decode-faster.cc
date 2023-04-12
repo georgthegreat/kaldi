@@ -70,7 +70,6 @@ int32 main(int argc, char *argv[]) {
   using namespace fst;
 
   try {
-    typedef kaldi::int32 int32;
     typedef OnlineFeInput<Mfcc> FeInput;
     TcpServer tcp_server;
     signal(SIGPIPE, SIG_IGN);

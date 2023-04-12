@@ -71,7 +71,6 @@ bool AddWeightToFst(const fst::StdVectorFst &normalization_fst,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Converts chain e2e numerator fst (containing transition-ids) to fst (containing pdf-ids+1, \n"

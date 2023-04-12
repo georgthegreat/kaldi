@@ -28,7 +28,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Convert alignments from one decision-tree/model to another\n"

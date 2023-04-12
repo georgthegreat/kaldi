@@ -28,8 +28,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint64 uint64;
 
     const char *usage =
         "Take a union of the indexed lattices. The input index is in "

@@ -27,7 +27,6 @@
 
 using kaldi::AmSgmm2;
 using kaldi::MleAmSgmm2Accs;
-using kaldi::int32;
 using kaldi::BaseFloat;
 using kaldi::Exp;
 

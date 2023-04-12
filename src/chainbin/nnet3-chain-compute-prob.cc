@@ -27,8 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet3;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "Computes and prints to in logging messages the average log-prob per frame of\n"

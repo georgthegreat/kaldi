@@ -37,7 +37,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Adds self-loops to states of an FST to propagate disambiguation symbols through it\n"

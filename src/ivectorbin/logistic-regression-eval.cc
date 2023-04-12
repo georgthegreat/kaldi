@@ -116,7 +116,6 @@ int32 ComputeScores(ParseOptions &po, const LogisticRegressionConfig &config,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Evaluates a model on input vectors and outputs either\n"

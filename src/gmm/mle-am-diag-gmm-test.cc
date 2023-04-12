@@ -24,7 +24,6 @@
 
 using kaldi::AmDiagGmm;
 using kaldi::AccumAmDiagGmm;
-using kaldi::int32;
 using kaldi::BaseFloat;
 namespace ut = kaldi::unittest;
 using namespace kaldi;

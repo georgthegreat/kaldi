@@ -46,7 +46,7 @@ void LatticeAcousticRescore(const Matrix<BaseFloat> &log_like,
                             const TransitionModel &trans_model,
                             const std::vector<int32> &state_times,
                             Lattice *lat) {
-  kaldi::uint64 props = lat->Properties(fst::kFstProperties, false);
+  uint64 props = lat->Properties(fst::kFstProperties, false);
   if (!(props & fst::kTopSorted))
     KALDI_ERR << "Input lattice must be topologically sorted.";
 
@@ -85,7 +85,6 @@ void LatticeAcousticRescore(const Matrix<BaseFloat> &log_like,
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Perform one iteration of MMI training using SGD with per-utterance "
@@ -128,7 +127,7 @@ int main(int argc, char *argv[]) {
         "Add in the scores in the input lattices with this scale, "
         "rather than discarding them.");
 
-    kaldi::int32 max_frames = 6000;
+    int32 max_frames = 6000;
     po.Register("max-frames", &max_frames,
         "Maximum number of frames an utterance can have (skipped if longer)");
 
@@ -157,7 +156,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
 #if HAVE_CUDA == 1
     CuDevice::Instantiate().SelectGpuId(use_gpu);
@@ -214,7 +212,7 @@ int main(int argc, char *argv[]) {
     int32 num_done = 0, num_no_num_ali = 0, num_no_den_lat = 0,
           num_other_error = 0, num_frm_drop = 0;
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
     double lat_like;  // total likelihood of the lattice
     double lat_ac_like;  // acoustic likelihood weighted by posterior.
     double total_mmi_obj = 0.0, mmi_obj = 0.0;
@@ -265,7 +263,7 @@ int main(int argc, char *argv[]) {
                           &den_lat);
       }
       // optional sort it topologically
-      kaldi::uint64 props = den_lat.Properties(fst::kFstProperties, false);
+      uint64 props = den_lat.Properties(fst::kFstProperties, false);
       if (!(props & fst::kTopSorted)) {
         if (fst::TopSort(&den_lat) == false) {
           KALDI_ERR << "Cycles detected in lattice.";

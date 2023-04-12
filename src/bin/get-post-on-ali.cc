@@ -29,7 +29,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Given input posteriors, e.g. derived from lattice-to-post, and an alignment\n"

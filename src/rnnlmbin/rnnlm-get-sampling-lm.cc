@@ -26,8 +26,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::rnnlm;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     SamplingLmEstimatorOptions config;
     bool binary = true;

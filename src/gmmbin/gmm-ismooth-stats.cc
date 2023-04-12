@@ -27,7 +27,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Apply I-smoothing to statistics, e.g. for discriminative training\n"

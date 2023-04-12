@@ -54,7 +54,6 @@ int main(int argc, char *argv[]) {
   using namespace kaldi;
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Trains two-level decision tree.  Outputs the larger tree, and a mapping from the\n"

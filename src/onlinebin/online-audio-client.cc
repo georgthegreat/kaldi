@@ -51,7 +51,6 @@ struct RecognizedWord {
 
 int main(int argc, char** argv) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   #if !defined(_MSC_VER)
   try {
 

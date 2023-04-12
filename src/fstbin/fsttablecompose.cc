@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
     /*
       fsttablecompose should always give equivalent results to compose,
       but it is more efficient for certain kinds of inputs.

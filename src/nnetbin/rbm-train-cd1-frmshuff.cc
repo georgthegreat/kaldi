@@ -32,7 +32,6 @@
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Train RBM by Contrastive Divergence alg. with 1 step of "
@@ -71,7 +70,7 @@ int main(int argc, char *argv[]) {
     rnd_opts.minibatch_size = 100;
     rnd_opts.Register(&po);
 
-    kaldi::int32 max_frames = 6000;
+    int32 max_frames = 6000;
     po.Register("max-frames", &max_frames,
         "Maximum number of frames an utterance can have (skipped if longer)");
 
@@ -95,7 +94,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
 #if HAVE_CUDA == 1
     CuDevice::Instantiate().SelectGpuId(use_gpu);
@@ -128,7 +126,7 @@ int main(int argc, char *argv[]) {
     // pass options to RBM,
     rbm.SetRbmTrainOptions(trn_opts_rbm);
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     RandomizerMask randomizer_mask(rnd_opts);

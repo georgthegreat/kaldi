@@ -27,7 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using std::vector;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Copy Gaussian indices for pruning, possibly making the\n"
         "lists shorter (e.g. the --n=10 limits to the 10 best indices\n"

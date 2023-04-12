@@ -28,7 +28,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Transform GMM means with linear or affine transform\n"

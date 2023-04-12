@@ -35,7 +35,6 @@ using std::vector;
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Estimate global fMLLR transforms, either per utterance or for the supplied\n"

@@ -25,7 +25,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   typedef std::string string;
   try {
     const char *usage =

@@ -42,7 +42,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Copy tables/archives of FSTs, indexed by a string (e.g. utterance-id)\n"

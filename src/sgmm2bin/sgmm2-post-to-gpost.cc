@@ -60,7 +60,6 @@ int main(int argc, char *argv[]) {
         gpost_wspecifier = po.GetArg(4);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     AmSgmm2 am_sgmm;
     TransitionModel trans_model;
@@ -72,7 +71,7 @@ int main(int argc, char *argv[]) {
     }
 
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     RandomAccessPosteriorReader posteriors_reader(posteriors_rspecifier);

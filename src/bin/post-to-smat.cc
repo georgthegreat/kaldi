@@ -24,7 +24,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "This program turns an archive of per-frame posteriors, e.g. from\n"

@@ -68,8 +68,6 @@ int main(int argc, char *argv[]) {
     
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     // Initialize the readers before the model, as the model can
     // be large, and we don't want to call fork() after reading it if

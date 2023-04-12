@@ -24,7 +24,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage  =
         "Converts an Arpa format language model into ConstArpaLm format,\n"

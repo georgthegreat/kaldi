@@ -114,8 +114,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace kaldi::nnet2;
     using std::string;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "This program averages (or sums, if --sum=true) the parameters over a\n"

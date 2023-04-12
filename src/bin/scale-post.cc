@@ -26,8 +26,7 @@
 
 int main(int argc, char *argv[]) {
   try {
-    using namespace kaldi;
-    typedef kaldi::int32 int32;  
+    using namespace kaldi;  
 
     const char *usage =
         "Scale posteriors with either a global scale, or a different scale for "

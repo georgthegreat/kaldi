@@ -59,7 +59,6 @@ int main(int argc, char *argv[]) {
         accs_wxfilename = po.GetArg(3);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     DiagGmm gmm;
     ReadKaldiObject(gmm_filename, &gmm);

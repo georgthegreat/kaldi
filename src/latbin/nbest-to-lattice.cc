@@ -36,7 +36,6 @@ bool GetUtteranceId(const std::string &nbest_id, std::string *utterance_id) {
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Read in a Table containing N-best entries from a lattices (i.e. individual\n"

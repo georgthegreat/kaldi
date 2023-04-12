@@ -25,7 +25,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
     const char *usage =
       "Initialize Neural Network parameters according to a prototype (nnet1).\n"

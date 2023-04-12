@@ -29,7 +29,6 @@
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
 
   try {
     const char *usage =
@@ -70,7 +69,7 @@ int main(int argc, char *argv[]) {
     po.Register("frame-weights", &frame_weights,
         "Per-frame weights to scale gradients (frame selection/weighting).");
 
-    kaldi::int32 max_frames = 6000;  // Allow segments maximum of one minute by default
+    int32 max_frames = 6000;  // Allow segments maximum of one minute by default
     po.Register("max-frames",&max_frames, "Maximum number of frames a segment can have to be processed");
 
     std::string use_gpu="yes";
@@ -101,7 +100,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
 #if HAVE_CUDA == 1
     CuDevice::Instantiate().SelectGpuId(use_gpu);
@@ -121,7 +119,7 @@ int main(int argc, char *argv[]) {
       nnet.SetDropoutRate(0.0);
     }
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     RandomAccessPosteriorReader targets_reader(targets_rspecifier);

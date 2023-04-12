@@ -23,7 +23,6 @@
 #include "util/kaldi-io.h"
 
 using kaldi::AmDiagGmm;
-using kaldi::int32;
 using kaldi::BaseFloat;
 namespace ut = kaldi::unittest;
 

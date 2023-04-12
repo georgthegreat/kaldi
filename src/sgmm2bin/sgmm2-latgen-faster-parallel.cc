@@ -107,7 +107,6 @@ void ProcessUtterance(const AmSgmm2 &am_sgmm,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::Fst;
     using fst::VectorFst;
@@ -162,7 +161,7 @@ int main(int argc, char *argv[]) {
         alignment_wspecifier = po.GetOptArg(6);
 
     double tot_like = 0.0;
-    kaldi::int64 frame_count = 0;    
+    int64 frame_count = 0;    
     int num_done = 0, num_err = 0;
     Timer timer;
     Fst<StdArc> *decode_fst = NULL;

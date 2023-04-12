@@ -24,7 +24,6 @@
 #include "util/kaldi-io.h"
 
 using kaldi::AmSgmm2;
-using kaldi::int32;
 using kaldi::BaseFloat;
 namespace ut = kaldi::unittest;
 

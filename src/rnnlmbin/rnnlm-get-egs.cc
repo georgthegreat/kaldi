@@ -27,8 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::rnnlm;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "This program processes lines of text (typically sentences) with weights,\n"

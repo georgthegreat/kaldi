@@ -25,8 +25,7 @@
 
 int main(int argc, char *argv[]) {
   try {
-    using namespace kaldi;
-    typedef kaldi::int32 int32;  
+    using namespace kaldi;  
 
     const char *usage =
         "Turn posteriors into per-frame weights (typically most useful after\n"

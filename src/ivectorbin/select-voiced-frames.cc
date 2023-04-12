@@ -28,7 +28,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    using kaldi::int32;
 
     const char *usage =
         "Select a subset of frames of the input files, based on the output of\n"

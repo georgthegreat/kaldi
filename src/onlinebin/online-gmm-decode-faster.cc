@@ -34,7 +34,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace fst;
 
-    typedef kaldi::int32 int32;
     typedef OnlineFeInput<Mfcc> FeInput;
 
     // Up to delta-delta derivative features are calculated (unless LDA is used)

@@ -22,7 +22,7 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int64 int64;
+  typedef int64 int64;
   try {
     const char *usage =
         "Add word insertion penalty to the lattice.\n"

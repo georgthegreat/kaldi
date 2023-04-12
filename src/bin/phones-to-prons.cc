@@ -63,7 +63,6 @@ int main(int argc, char *argv[]) {
   using namespace kaldi;
   using fst::VectorFst;
   using fst::StdArc;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Convert pairs of (phone-level, word-level) transcriptions to\n"
@@ -172,7 +171,7 @@ int main(int argc, char *argv[]) {
         if (g_kaldi_verbose_level >= 2) {
           KALDI_LOG << "phn2word FST is below:";
           fst::FstPrinter<StdArc> fstprinter(phn2word, NULL, NULL, NULL, false, true, "\t");
-          fstprinter.Print(&std::cerr, "standard error");
+          fstprinter.Print(std::cerr, "standard error");
           KALDI_LOG << "phone sequence is: ";
           for (size_t i = 0; i < phones.size(); i++)
             std::cerr << phones[i] << ' ';

@@ -28,7 +28,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Print various information about an SGMM.\n"
         "Usage: sgmm2-info [options] <model-in> [model-in2 ... ]\n";

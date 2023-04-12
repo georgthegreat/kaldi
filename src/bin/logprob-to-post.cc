@@ -38,7 +38,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Convert a matrix of log-probabilities (e.g. from nnet-logprob) to posteriors\n"

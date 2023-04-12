@@ -27,7 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet2;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "This program can used when transferring a neural net from one language\n"

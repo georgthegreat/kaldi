@@ -31,7 +31,6 @@ using std::vector;
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Estimate fMLLR basis representation. Reads a set of gradient scatter\n"

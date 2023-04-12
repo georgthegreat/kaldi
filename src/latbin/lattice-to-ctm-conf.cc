@@ -26,7 +26,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "This tool turns a lattice into a ctm with confidences, based on the\n"

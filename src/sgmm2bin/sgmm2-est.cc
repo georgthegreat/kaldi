@@ -30,7 +30,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Estimate SGMM model parameters from accumulated stats.\n"
         "Usage: sgmm2-est [options] <model-in> <stats-in> <model-out>\n";

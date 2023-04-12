@@ -26,6 +26,7 @@
 #include <algorithm>
 #include "itf/options-itf.h"
 #include "util/kaldi-semaphore.h"
+#include "util/kaldi_util_Export.h"
 
 // This header provides convenient mechanisms for parallelization.
 //
@@ -57,7 +58,7 @@
 
 namespace kaldi {
 
-extern int32 g_num_threads;  // Maximum number of threads (for programs that
+extern int32 kaldi_util_EXPORT g_num_threads;  // Maximum number of threads (for programs that
 // use threads, which is not many of them, e.g. the SGMM update program does.
 // This is 8 by default.  You can change this on the command line, where
 // used, with --num-threads.  Programs that think they will use threads

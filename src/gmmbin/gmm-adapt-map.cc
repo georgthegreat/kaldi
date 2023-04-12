@@ -31,7 +31,6 @@
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Compute MAP estimates per-utterance (default) or per-speaker for\n"

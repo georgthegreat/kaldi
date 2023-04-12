@@ -113,7 +113,6 @@ void ApplyPca(const Matrix<BaseFloat> &ivectors_in,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Perform PLDA scoring for speaker diarization.  The input reco2utt\n"

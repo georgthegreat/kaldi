@@ -28,7 +28,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace kaldi::nnet2;
     
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Copy a (cpu-based) neural net: reads the AmNnet with its transition model, but\n"

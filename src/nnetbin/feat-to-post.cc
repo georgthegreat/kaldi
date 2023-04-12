@@ -26,7 +26,6 @@
  *  format of NN training targets in 'nnet1'. */
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Convert features into posterior format, which is the generic format \n"

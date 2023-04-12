@@ -59,8 +59,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint64 uint64;
     typedef StdArc::StateId StateId;
     typedef StdArc::Weight Weight;
 

@@ -54,7 +54,6 @@ void AccumulateForUtterance(const Matrix<BaseFloat> &feats,
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Perform basis fMLLR adaptation in testing stage, either per utterance or\n"

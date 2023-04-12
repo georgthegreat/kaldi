@@ -68,7 +68,6 @@ void AccumulateForUtterance(const Matrix<BaseFloat> &feats,
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Estimate FMLLR transform for SGMMs, either per utterance or for the "

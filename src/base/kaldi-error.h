@@ -33,6 +33,7 @@
 
 #include "base/kaldi-types.h"
 #include "base/kaldi-utils.h"
+#include "base/kaldi_base_Export.h"
 /* Important that this file does not depend on any other kaldi headers. */
 
 #ifdef _MSC_VER
@@ -54,7 +55,7 @@ void SetProgramName(const char *basename);
 
 /// This is set by util/parse-options.{h,cc} if you set --verbose=? option.
 /// Do not use directly, prefer {Get,Set}VerboseLevel().
-extern int32 g_kaldi_verbose_level;
+extern int32 kaldi_base_EXPORT g_kaldi_verbose_level;
 
 /// Get verbosity level, usually set via command line '--verbose=' switch.
 inline int32 GetVerboseLevel() { return g_kaldi_verbose_level; }

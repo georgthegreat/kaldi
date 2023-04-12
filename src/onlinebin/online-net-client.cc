@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {
 #ifndef KALDI_NO_PORTAUDIO
     using namespace kaldi;
 
-    typedef kaldi::int32 int32;
     typedef OnlineFeInput<Mfcc> FeInput;
 
     // Time out interval for the PortAudio source

@@ -30,7 +30,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Generate random FST\n"

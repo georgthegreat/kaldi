@@ -102,7 +102,6 @@ void CUDART_CB CopySlicesCallback(void *cb_state_p) {
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Compute online features and ivector features.\n\n"

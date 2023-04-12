@@ -28,7 +28,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Converts alignments (containing transition-ids) to pdf-ids, zero-based.\n"

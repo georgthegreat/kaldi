@@ -29,7 +29,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using fst::StdArc;
-    using kaldi::int32;
 
     const char *usage =
         "Convert lattices so that the arcs in the CompactLattice format correspond with\n"

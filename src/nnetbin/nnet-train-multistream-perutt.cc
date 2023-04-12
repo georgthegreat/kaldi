@@ -34,7 +34,6 @@
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
 
   try {
     const char *usage =
@@ -105,7 +104,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
 #if HAVE_CUDA == 1
     CuDevice::Instantiate().SelectGpuId(use_gpu);
@@ -125,7 +123,7 @@ int main(int argc, char *argv[]) {
       nnet.SetDropoutRate(0.0);
     }
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
 
     // Initialize feature and target readers,
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
@@ -309,7 +307,7 @@ int main(int argc, char *argv[]) {
         }
       }
 
-      kaldi::int64 tmp_frames = total_frames;
+      int64 tmp_frames = total_frames;
 
       num_done += frame_num_utt.size();
       total_frames += std::accumulate(frame_num_utt.begin(), frame_num_utt.end(), 0);

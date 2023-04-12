@@ -53,7 +53,6 @@ int main(int argc, char *argv[]) {
         gselect_wspecifier = po.GetArg(3);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     AmSgmm2 am_sgmm;
     {
@@ -65,7 +64,7 @@ int main(int argc, char *argv[]) {
     }
 
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     Int32VectorVectorWriter gselect_writer(gselect_wspecifier);

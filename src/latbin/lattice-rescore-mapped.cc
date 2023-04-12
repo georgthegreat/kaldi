@@ -32,7 +32,7 @@ void LatticeAcousticRescore(const TransitionModel &trans_model,
                             const Matrix<BaseFloat> &log_likes,
                             const std::vector<int32> &state_times,
                             Lattice *lat) {
-  kaldi::uint64 props = lat->Properties(fst::kFstProperties, false);
+  uint64 props = lat->Properties(fst::kFstProperties, false);
   if (!(props & fst::kTopSorted))
     KALDI_ERR << "Input lattice must be topologically sorted.";
 
@@ -74,8 +74,6 @@ void LatticeAcousticRescore(const TransitionModel &trans_model,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;
@@ -138,7 +136,7 @@ int main(int argc, char *argv[]) {
       if (old_acoustic_scale != 1.0)
         fst::ScaleLattice(fst::AcousticLatticeScale(old_acoustic_scale), &lat);
 
-      kaldi::uint64 props = lat.Properties(fst::kFstProperties, false);
+      uint64 props = lat.Properties(fst::kFstProperties, false);
       if (!(props & fst::kTopSorted)) {
         if (fst::TopSort(&lat) == false)
           KALDI_ERR << "Cycles detected in lattice.";

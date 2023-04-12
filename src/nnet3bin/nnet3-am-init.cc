@@ -27,7 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet3;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Initialize nnet3 am-nnet (i.e. neural network-based acoustic model, with\n"

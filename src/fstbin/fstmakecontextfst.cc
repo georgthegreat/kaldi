@@ -33,7 +33,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Constructs a context FST with a specified context-width and context-position.\n"
@@ -74,7 +73,7 @@ int main(int argc, char *argv[]) {
     std::string fst_out_filename = po.GetOptArg(4);
 
 
-    std::vector<kaldi::int32> phone_syms;
+    std::vector<int32> phone_syms;
     {
       fst::SymbolTable *phones_symtab = NULL;
       {  // read phone symbol table.

@@ -26,7 +26,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    using kaldi::int32;
 
     const char *usage =
         "Apply sliding-window cepstral mean (and optionally variance)\n"

@@ -27,7 +27,6 @@
 #include "util/kaldi-io.h"
 
 using kaldi::AmSgmm2;
-using kaldi::int32;
 using kaldi::BaseFloat;
 using kaldi::Vector;
 using kaldi::Matrix;

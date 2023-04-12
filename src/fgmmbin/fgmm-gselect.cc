@@ -27,7 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using std::vector;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Precompute Gaussian indices for pruning\n"
         " (e.g. in training UBMs, SGMMs, tied-mixture systems)\n"
@@ -72,7 +71,7 @@ int main(int argc, char *argv[]) {
     }
     
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
     
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     Int32VectorVectorWriter gselect_writer(gselect_wspecifier);

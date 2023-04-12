@@ -32,7 +32,6 @@ int main(int argc, char *argv[]) {
   using namespace kaldi;
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Cluster phones (or sets of phones) into sets for various purposes\n"

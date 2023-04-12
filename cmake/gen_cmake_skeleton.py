@@ -154,6 +154,7 @@ def disable_for_win32(t):
         "online-audio-client",
         "online-net-client",
         "online2-tcp-nnet3-decode-faster",
+        "online2-tcp-nnet3-decode-faster-emscripten",
         "online-server-gmm-decode-faster",
         "online-audio-server-decode-faster"
     ]
@@ -266,6 +267,10 @@ class CMakeListsLibrary(object):
         ret.append("     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>")
         ret.append("     $<INSTALL_INTERFACE:include/kaldi>")
         ret.append(")\n")
+        
+        ret.append("if(MSVC)")
+        ret.append("    target_compile_definitions(" + self.target_name + " PRIVATE " + self.target_name.replace('-', '_') + "_EXPORTS)")
+        ret.append("endif(MSVC)\n")
 
         if len(self.depends) > 0:
             ret.append("target_link_libraries(" + self.target_name + " PUBLIC")

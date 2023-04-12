@@ -30,7 +30,6 @@
     symbol gets a weight of 1.0 */
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Convert alignments to posteriors.  This is simply a format change\n"

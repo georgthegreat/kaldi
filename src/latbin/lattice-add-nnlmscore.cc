@@ -29,7 +29,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Add estimated neural language model scores of all arcs in a lattice\n"

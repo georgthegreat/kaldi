@@ -30,7 +30,6 @@ using std::vector;
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Compute FMLLR transforms per-utterance (default) or per-speaker for "
@@ -84,7 +83,7 @@ int main(int argc, char *argv[]) {
     fmllr_accs.Init(regtree.NumBaseclasses(), am_gmm.Dim());
 
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
 
     int32 num_done = 0, num_no_alignment = 0, num_other_error = 0;
     double tot_objf_impr = 0.0, tot_t_objf = 0.0;

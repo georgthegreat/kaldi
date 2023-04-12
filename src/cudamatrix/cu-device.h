@@ -48,6 +48,7 @@ typedef int cusolverStatus_t;
 #include "base/timer.h"
 #include "cudamatrix/cu-allocator.h"
 #include "cudamatrix/cu-common.h"
+#include "cudamatrix/kaldi_cudamatrix_Export.h"
 
 
 namespace kaldi {
@@ -283,7 +284,7 @@ class CuDevice {
     }
   };
 
-  static CuDeviceOptions device_options_;
+  static CuDeviceOptions kaldi_cudamatrix_EXPORT device_options_;
 
   // Default constructor used to initialize this_thread_device_
   CuDevice();
@@ -326,20 +327,23 @@ class CuDevice {
   // Each thread has its own CuDevice object, which contains the cublas and
   // cusparse handles.  These are unique to the thread (which is what is
   // recommended by NVidia).
+  #ifdef _WIN32
+  static CuDevice kaldi_cudamatrix_EXPORT this_thread_device_;
+  #else
   static thread_local CuDevice this_thread_device_;
-
+  #endif
   // The GPU device-id that we are using.  This will be initialized to -1, and will
   // be set when the user calls
   //  CuDevice::Instantiate::SelectGpuId(...)
   // from the main thread.  Background threads will, when spawned and when
   // CuDevice::Instantiate() is called from them the first time, will
   // call cudaSetDevice(device_id))
-  static int32 device_id_;
+  static int32 kaldi_cudamatrix_EXPORT device_id_;
 
   // This will automatically be set to true if the application has multiple
   // threads that access the GPU device.  It is used to know whether to
   // use locks when accessing the allocator and the profiling-related code.
-  static bool multi_threaded_;
+  static bool kaldi_cudamatrix_EXPORT multi_threaded_;
 
   // The variable profile_map_ will only be used if the verbose level is >= 1;
   // it will accumulate some function-level timing information that is printed

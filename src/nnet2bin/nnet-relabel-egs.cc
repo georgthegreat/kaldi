@@ -54,8 +54,7 @@ int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet2;
 
-  typedef kaldi::int32 int32;
-  typedef kaldi::int64 int64;
+  typedef int64 int64;
   try {
     const char *usage =
         "Relabel neural network egs with the read pdf-id alignments, "

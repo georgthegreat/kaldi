@@ -69,7 +69,6 @@ int main(int argc, char *argv[]) {
         accs_wxfilename = po.GetArg(4);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     int32 num_done = 0, num_err = 0;
     Vector<double> transition_accs;

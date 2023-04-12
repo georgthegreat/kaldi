@@ -204,7 +204,6 @@ void ComputeAndSubtractMean(
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Compute an LDA matrix for iVector system.  Reads in iVectors per utterance,\n"

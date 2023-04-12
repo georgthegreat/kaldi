@@ -30,7 +30,6 @@ int main(int argc, char *argv[]) {
   using namespace kaldi;
   using fst::VectorFst;
   using fst::StdArc;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Caution: this program relates to older scripts and is deprecated,\n"
