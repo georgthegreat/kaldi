@@ -27,7 +27,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Compute SGMM model projection that only models a part of a pre-LDA space.\n"
         "Used in predictive SGMMs.  Takes as input an LDA+MLLT transform,\n"

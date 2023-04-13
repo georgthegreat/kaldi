@@ -32,8 +32,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace fst;
     
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
     
     const char *usage =
         "Reads in wav file(s) and processes them as in online2-wav-nnet2-latgen-faster,\n"

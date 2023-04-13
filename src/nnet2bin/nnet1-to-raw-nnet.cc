@@ -176,7 +176,6 @@ nnet2::Nnet *ConvertNnet1ToNnet2(const nnet1::Nnet &nnet1,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Convert nnet1 neural net to nnet2 'raw' neural net\n"

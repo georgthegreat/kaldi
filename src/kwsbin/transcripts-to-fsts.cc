@@ -41,8 +41,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint64 uint64;
 
     const char *usage =
         "Build a linear acceptor for each transcription in the archive. "

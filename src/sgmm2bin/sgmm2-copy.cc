@@ -28,7 +28,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Copy SGMM (possibly changing binary/text format)\n"
         "Usage: sgmm2-copy [options] <model-in> <model-out>\n"

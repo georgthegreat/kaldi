@@ -27,7 +27,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet2;
-    typedef kaldi::int32 int32;
 
     // TODO: specify in the usage message where the example scripts are.
     const char *usage =

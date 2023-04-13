@@ -27,7 +27,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  using kaldi::int32;
   try {
     const char *usage =
         "Accumulate stats for fMPE training, using GMM model.  Note: this could\n"

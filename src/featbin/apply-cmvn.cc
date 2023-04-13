@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
       // don't even uncompress, if it was a CompressedMatrix.
       SequentialGeneralMatrixReader reader(feat_rspecifier);
       GeneralMatrixWriter writer(feat_wspecifier);
-      kaldi::int32 num_done = 0;
+      int32 num_done = 0;
       for (;!reader.Done(); reader.Next()) {
         writer.Write(reader.Key(), reader.Value());
         num_done++;
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
     }
 
 
-    kaldi::int32 num_done = 0, num_err = 0;
+    int32 num_done = 0, num_err = 0;
 
     SequentialBaseFloatMatrixReader feat_reader(feat_rspecifier);
     BaseFloatMatrixWriter feat_writer(feat_wspecifier);

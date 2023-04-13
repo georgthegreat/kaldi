@@ -23,7 +23,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  using kaldi::int32;
   try {
     const char *usage =
         "Sum fMPE stats\n"

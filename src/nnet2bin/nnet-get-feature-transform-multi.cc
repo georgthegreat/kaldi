@@ -24,7 +24,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Get feature-projection transform using stats obtained with acc-lda.\n"

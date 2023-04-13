@@ -112,7 +112,6 @@ class ArcPosteriorComputer {
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;

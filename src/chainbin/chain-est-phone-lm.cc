@@ -26,7 +26,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::chain;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Initialize un-smoothed phone language model for 'chain' training\n"

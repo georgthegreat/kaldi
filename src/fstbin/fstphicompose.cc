@@ -81,7 +81,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
     /*
       fstphicompose does composition, but treats the second FST
       specially (basically, like a backoff LM); whenever the

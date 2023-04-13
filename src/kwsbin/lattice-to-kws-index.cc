@@ -32,8 +32,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using fst::VectorFst;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint64 uint64;
 
     const char *usage =
         "Create an inverted index of the given lattices. The output index is \n"

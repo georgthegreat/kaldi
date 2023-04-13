@@ -27,8 +27,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "Given features and Gaussian-selection (gselect) information for\n"

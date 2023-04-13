@@ -32,7 +32,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Accumulate stats from posteriors and features for instantiating "

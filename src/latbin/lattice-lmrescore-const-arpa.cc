@@ -28,8 +28,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "Rescores lattice with the ConstArpaLm format language model. The LM\n"

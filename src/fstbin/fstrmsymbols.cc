@@ -86,7 +86,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     bool apply_to_output = false;
     bool remove_arcs = false;

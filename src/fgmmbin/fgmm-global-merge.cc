@@ -65,7 +65,6 @@ void MergeFullGmm(const FullGmm &src, FullGmm *dst) {
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Combine a number of GMMs into a larger GMM, with #Gauss = \n"

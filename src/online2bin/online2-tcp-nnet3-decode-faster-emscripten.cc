@@ -198,8 +198,6 @@ class OnlineASR {
 #ifndef __EMSCRIPTEN__
 
 int main(int argc, const char* const* argv) {
-  using kaldi::int32;
-  using kaldi::int64;
   using kaldi::OnlineASR;
   using kaldi::OnlineASROptionParser;
   using kaldi::Vector;
@@ -262,13 +260,12 @@ int main(int argc, const char* const* argv) {
 #include <iterator>
 
 using std::vector;
-using kaldi::int16;
 using emscripten::val;
 using emscripten::class_;
 using emscripten::optional_override;
 using emscripten::register_vector;
 
-/* Convert JS Int16Array to C++ std::vector<kaldi::int16> without copy of data
+/* Convert JS Int16Array to C++ std::vector<int16> without copy of data
 */
 vector<int16> typed_array_to_vector(const val &int16_array) {
   unsigned int length = int16_array["length"].as<unsigned int>();

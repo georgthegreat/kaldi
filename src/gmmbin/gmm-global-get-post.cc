@@ -28,7 +28,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using std::vector;
-    typedef kaldi::int32 int32;
     const char *usage =
         "Precompute Gaussian indices and convert immediately to top-n\n"
         "posteriors (useful in iVector extraction with diagonal UBMs)\n"
@@ -68,7 +67,7 @@ int main(int argc, char *argv[]) {
     }
     
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
     
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     PosteriorWriter post_writer(post_wspecifier);

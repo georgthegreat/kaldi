@@ -118,8 +118,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace fst;
 
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "Reads in audio from a network socket and performs online\n"

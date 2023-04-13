@@ -37,7 +37,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet3;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::Fst;
     using fst::StdArc;
@@ -125,7 +124,7 @@ int main(int argc, char *argv[]) {
                    << word_syms_filename;
 
     double tot_like = 0.0;
-    kaldi::int64 frame_count = 0;
+    int64 frame_count = 0;
     int num_success = 0, num_fail = 0;
 
     // this object contains precomputed stuff that is used by all decodable
@@ -251,7 +250,7 @@ int main(int argc, char *argv[]) {
       }
     }
 
-    kaldi::int64 input_frame_count =
+    int64 input_frame_count =
         frame_count * decodable_opts.frame_subsampling_factor;
 
     double elapsed = timer.Elapsed();

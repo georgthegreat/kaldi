@@ -620,7 +620,12 @@ CuDevice::~CuDevice() {
 
 // Each thread has its own copy of the CuDevice object.
 // Note: this was declared "static".
-thread_local CuDevice CuDevice::this_thread_device_;
+  #ifdef _WIN32
+  CuDevice CuDevice::this_thread_device_;
+  #else
+  thread_local CuDevice CuDevice::this_thread_device_;
+  #endif
+
 
 CuDevice::CuDeviceOptions CuDevice::device_options_;
 

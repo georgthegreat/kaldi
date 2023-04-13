@@ -48,7 +48,6 @@ void AccStatsForUtterance(const TransitionModel &trans_model,
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Estimate fMLLR transforms in the space before splicing and linear transforms\n"

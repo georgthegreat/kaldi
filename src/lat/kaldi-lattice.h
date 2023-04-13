@@ -31,7 +31,7 @@ namespace kaldi {
 
 typedef fst::LatticeWeightTpl<BaseFloat> LatticeWeight;
 
-// careful: kaldi::int32 is not always the same C type as fst::int32
+// careful: int32 is not always the same C type as fst::int32
 typedef fst::CompactLatticeWeightTpl<LatticeWeight, int32> CompactLatticeWeight;
 
 typedef fst::CompactLatticeWeightCommonDivisorTpl<LatticeWeight, int32>

@@ -32,7 +32,6 @@
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Combine 2 or more streams with NN-training targets into single stream.\n"

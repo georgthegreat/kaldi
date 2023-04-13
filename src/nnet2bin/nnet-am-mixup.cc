@@ -28,7 +28,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet2;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Add mixture-components to a neural net (comparable to mixtures in a Gaussian\n"

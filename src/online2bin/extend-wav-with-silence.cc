@@ -42,7 +42,6 @@ void ExtendWaveWithSilence(const Vector<BaseFloat> &wav_in,
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Extend wave data with a fairly long silence at the end (e.g. 5 seconds).\n"

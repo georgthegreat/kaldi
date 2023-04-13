@@ -62,7 +62,6 @@ int main(int argc, char *argv[]) {
         accs_wxfilename = po.GetArg(4);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     // Initialize the readers before the model, as this can avoid
     // crashes on systems with low virtual memory.

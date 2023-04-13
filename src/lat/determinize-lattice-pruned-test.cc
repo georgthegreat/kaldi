@@ -34,7 +34,7 @@ namespace fst {
 // FSTs (not guaranteed determinzable, but we use the
 // max-states option to stop it getting out of control).
 template<class Arc> void TestDeterminizeLatticePruned() {
-  typedef kaldi::int32 Int;
+  typedef int32 Int;
   typedef typename Arc::Weight Weight;
   typedef ArcTpl<CompactLatticeWeightTpl<Weight, Int> > CompactArc;
 

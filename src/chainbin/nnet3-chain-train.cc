@@ -27,8 +27,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace kaldi::nnet3;
     using namespace kaldi::chain;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
 
     const char *usage =
         "Train nnet3+chain neural network parameters with backprop and stochastic\n"

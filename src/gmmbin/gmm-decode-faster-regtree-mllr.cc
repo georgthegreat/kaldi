@@ -82,7 +82,7 @@ bool DecodeUtterance(kaldi::FasterDecoder *decoder,
       KALDI_WARN << "Decoder did not reach end-state, outputting partial "
           "traceback.";
     
-    vector<kaldi::int32> alignment, words;
+    vector<int32> alignment, words;
     LatticeWeight weight;
     GetLinearSymbolSequence(decoded, &alignment, &words, &weight);
 
@@ -116,7 +116,6 @@ bool DecodeUtterance(kaldi::FasterDecoder *decoder,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage = "Decode features using GMM-based model.\n"
               "Usage: gmm-decode-faster-regtree-mllr [options] model-in fst-in "
@@ -189,7 +188,7 @@ int main(int argc, char *argv[]) {
     }
 
     BaseFloat tot_like = 0.0;
-    kaldi::int64 frame_count = 0;
+    int64 frame_count = 0;
     int num_success = 0, num_fail = 0;
     FasterDecoder decoder(*decode_fst, decoder_opts);
 

@@ -26,7 +26,6 @@
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Demonstrating how to use the Speex wrapper in Kaldi by compressing input waveforms \n"

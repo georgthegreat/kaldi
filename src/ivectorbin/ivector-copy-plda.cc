@@ -25,7 +25,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Copy a PLDA object, possibly applying smoothing to the within-class\n"

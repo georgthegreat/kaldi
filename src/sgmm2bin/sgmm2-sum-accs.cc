@@ -25,7 +25,6 @@
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Sum multiple accumulated stats files for SGMM training.\n"

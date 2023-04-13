@@ -84,7 +84,6 @@ void PrepareMap(const std::string map_rxfilename,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "This program merges two archives of per-frame weights representing\n"

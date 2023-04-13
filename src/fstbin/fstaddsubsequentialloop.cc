@@ -38,7 +38,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Minimizes FST after encoding [this algorithm applicable to all FSTs in tropical semiring]\n"

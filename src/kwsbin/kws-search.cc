@@ -160,9 +160,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace fst;
     using std::vector;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint32 uint32;
-    typedef kaldi::uint64 uint64;
 
     const char *usage =
         "Search the keywords over the index. This program can be executed\n"
@@ -305,7 +302,7 @@ int main(int argc, char *argv[]) {
 
       KwsLexicographicFst keyword_fst;
       KwsLexicographicFst result_fst;
-      Map(keyword, &keyword_fst, VectorFstToKwsLexicographicFstMapper());
+      ArcMap(keyword, &keyword_fst, VectorFstToKwsLexicographicFstMapper());
       Compose(keyword_fst, index, &result_fst);
 
       if (stats_wspecifier != "") {

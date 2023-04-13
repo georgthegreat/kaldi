@@ -66,7 +66,7 @@ void ConvertLatticeToUnweightedAcceptor(const kaldi::Lattice &ilat,
   // first convert from  lattice to normal FST
   fst::ConvertLattice(ilat, ofst);
   // remove weights, project to output, sort according to input arg
-  fst::Map(ofst, fst::RmWeightMapper<fst::StdArc>());
+  fst::ArcMap(ofst, fst::RmWeightMapper<fst::StdArc>());
   fst::Project(ofst, fst::PROJECT_OUTPUT);  // The words are on the output side
   fst::Relabel(ofst, wildcards, wildcards);
   fst::RmEpsilon(ofst);   // Don't tolerate epsilons as they make it hard to
@@ -168,8 +168,6 @@ int main(int argc, char *argv[]) {
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;
-    typedef kaldi::int32 int32;
-    typedef kaldi::int64 int64;
     typedef fst::StdArc::Weight Weight;
     typedef fst::StdArc::StateId StateId;
 

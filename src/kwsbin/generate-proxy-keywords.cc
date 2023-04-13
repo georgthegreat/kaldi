@@ -61,8 +61,6 @@ int main(int argc, char *argv[]) {
     using namespace fst;
     using std::vector;
     using std::string;
-    typedef kaldi::int32 int32;
-    typedef kaldi::uint64 uint64;
     typedef StdArc::StateId StateId;
     typedef StdArc::Weight Weight;
 

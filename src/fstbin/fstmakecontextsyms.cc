@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
         ilabel_info_filename = po.GetArg(2),
         clg_symtab_filename = po.GetOptArg(3);
 
-    std::vector<std::vector<kaldi::int32> > ilabel_info;
+    std::vector<std::vector<int32> > ilabel_info;
     {
       bool binary;
       Input ki(ilabel_info_filename, &binary);

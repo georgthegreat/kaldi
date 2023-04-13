@@ -31,7 +31,6 @@ the current transformation), the un-transformed features and state
 posterior probabilities */
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Accumulate LDA statistics based on pdf-ids.\n"

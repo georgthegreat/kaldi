@@ -254,7 +254,6 @@ static void ReadPhoneCounts(std::string &filename, int32 num_phones,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    using kaldi::int32;
 
     const char *usage =
         "Initialize a biphone context-dependency tree with all the\n"

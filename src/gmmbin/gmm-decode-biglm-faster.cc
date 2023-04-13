@@ -69,7 +69,6 @@ int main(int argc, char *argv[])
 {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::Fst;
@@ -150,7 +149,7 @@ int main(int argc, char *argv[])
 
 
     BaseFloat tot_like = 0.0;
-    kaldi::int64 frame_count = 0;
+    int64 frame_count = 0;
     int num_success = 0, num_fail = 0;
 
     Timer timer;

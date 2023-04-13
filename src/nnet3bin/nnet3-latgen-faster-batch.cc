@@ -65,7 +65,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet3;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::Fst;
     using fst::StdArc;

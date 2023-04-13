@@ -29,7 +29,6 @@
 
 namespace kaldi {
 
-typedef kaldi::int32 int32;
 using fst::SymbolTable;
 using fst::VectorFst;
 using fst::StdArc;
@@ -94,7 +93,6 @@ void MakeLinearLG(const std::vector<int32> &transcripts,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;

@@ -27,7 +27,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Normalize length of iVectors to equal sqrt(feature-dimension)\n"

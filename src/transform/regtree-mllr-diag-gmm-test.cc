@@ -25,7 +25,6 @@
 #include "gmm/model-test-common.h"
 #include "transform/regtree-mllr-diag-gmm.h"
 
-using kaldi::int32;
 using kaldi::BaseFloat;
 using kaldi::RegtreeMllrDiagGmmAccs;
 namespace ut = kaldi::unittest;

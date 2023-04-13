@@ -46,7 +46,7 @@ void LatticeAcousticRescore(const Matrix<BaseFloat> &log_like,
                             const TransitionModel &trans_model,
                             const std::vector<int32> &state_times,
                             Lattice *lat) {
-  kaldi::uint64 props = lat->Properties(fst::kFstProperties, false);
+  uint64 props = lat->Properties(fst::kFstProperties, false);
   if (!(props & fst::kTopSorted))
     KALDI_ERR << "Input lattice must be topologically sorted.";
 
@@ -85,7 +85,6 @@ void LatticeAcousticRescore(const Matrix<BaseFloat> &log_like,
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "Perform one iteration of MPE/sMBR training using SGD with per-utterance "
@@ -136,7 +135,7 @@ int main(int argc, char *argv[]) {
     po.Register("one-silence-class", &one_silence_class,
         "If true, the newer behavior reduces insertions.");
 
-    kaldi::int32 max_frames = 6000;
+    int32 max_frames = 6000;
     po.Register("max-frames", &max_frames,
         "Maximum number of frames an utterance can have (skipped if longer)");
 
@@ -221,7 +220,7 @@ int main(int argc, char *argv[]) {
           num_no_den_lat = 0,
           num_other_error = 0;
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
     double total_frame_acc = 0.0, utt_frame_acc;
 
     // main loop over utterances,
@@ -269,7 +268,7 @@ int main(int argc, char *argv[]) {
                           &den_lat);
       }
       // optional sort it topologically
-      kaldi::uint64 props = den_lat.Properties(fst::kFstProperties, false);
+      uint64 props = den_lat.Properties(fst::kFstProperties, false);
       if (!(props & fst::kTopSorted)) {
         if (fst::TopSort(&den_lat) == false) {
           KALDI_ERR << "Cycles detected in lattice.";

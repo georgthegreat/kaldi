@@ -29,7 +29,6 @@
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;
@@ -107,7 +106,7 @@ int main(int argc, char *argv[]) {
       if (acoustic_scale != 1.0 || lm_scale != 1.0)
         fst::ScaleLattice(fst::LatticeScale(lm_scale, acoustic_scale), &lat);
       
-      kaldi::uint64 props = lat.Properties(fst::kFstProperties, false);
+      uint64 props = lat.Properties(fst::kFstProperties, false);
       if (!(props & fst::kTopSorted)) {
         if (fst::TopSort(&lat) == false)
           KALDI_ERR << "Cycles detected in lattice.";

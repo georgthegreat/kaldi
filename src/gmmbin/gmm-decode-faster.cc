@@ -67,7 +67,6 @@ fst::Fst<fst::StdArc> *ReadNetwork(std::string filename) {
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Decode features using GMM-based model.\n"
@@ -132,7 +131,7 @@ int main(int argc, char *argv[]) {
     fst::Fst<fst::StdArc> *decode_fst = ReadNetwork(fst_rxfilename);
     
     BaseFloat tot_like = 0.0;
-    kaldi::int64 frame_count = 0;
+    int64 frame_count = 0;
     int num_success = 0, num_fail = 0;
     FasterDecoder decoder(*decode_fst, decoder_opts);
 

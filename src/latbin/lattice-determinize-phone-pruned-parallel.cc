@@ -89,7 +89,6 @@ class DeterminizeLatticeTask {
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     
     const char *usage =
         "Determinize lattices, keeping only the best path (sequence of\n"

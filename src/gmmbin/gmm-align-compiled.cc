@@ -32,7 +32,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
     using fst::VectorFst;
     using fst::StdArc;
@@ -94,7 +93,7 @@ int main(int argc, char *argv[]) {
 
     int num_done = 0, num_err = 0, num_retry = 0;
     double tot_like = 0.0;
-    kaldi::int64 frame_count = 0;
+    int64 frame_count = 0;
 
     for (; !fst_reader.Done(); fst_reader.Next()) {
       std::string utt = fst_reader.Key();

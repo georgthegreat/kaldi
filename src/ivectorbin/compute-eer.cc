@@ -76,7 +76,6 @@ BaseFloat ComputeEer(std::vector<BaseFloat> *target_scores,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Computes Equal Error Rate\n"

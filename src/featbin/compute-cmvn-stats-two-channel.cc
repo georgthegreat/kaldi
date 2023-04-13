@@ -100,7 +100,6 @@ void AccCmvnStatsForPair(const std::string &utt1, const std::string &utt2,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    using kaldi::int32;
 
     const char *usage =
         "Compute cepstral mean and variance normalization statistics\n"

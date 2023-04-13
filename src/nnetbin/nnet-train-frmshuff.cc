@@ -29,7 +29,6 @@
 int main(int argc, char *argv[]) {
   using namespace kaldi;
   using namespace kaldi::nnet1;
-  typedef kaldi::int32 int32;
 
   try {
     const char *usage =
@@ -106,7 +105,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
 #if HAVE_CUDA == 1
     CuDevice::Instantiate().SelectGpuId(use_gpu);
@@ -126,7 +124,7 @@ int main(int argc, char *argv[]) {
       nnet.SetDropoutRate(0.0);
     }
 
-    kaldi::int64 total_frames = 0;
+    int64 total_frames = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     RandomAccessPosteriorReader targets_reader(targets_rspecifier);

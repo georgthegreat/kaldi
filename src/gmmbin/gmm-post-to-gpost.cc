@@ -53,7 +53,6 @@ int main(int argc, char *argv[]) {
         gpost_wspecifier = po.GetArg(4);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     AmDiagGmm am_gmm;
     TransitionModel trans_model;

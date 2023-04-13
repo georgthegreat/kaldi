@@ -97,7 +97,6 @@ void PreparePriors(const std::string &priors_str, int32 num_classes,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
       "This program computes frame-level voice activity decisions from a\n"

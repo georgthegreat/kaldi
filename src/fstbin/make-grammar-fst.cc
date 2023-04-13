@@ -31,7 +31,6 @@ void MakeGrammarFst(kaldi::ParseOptions po,
                     bool write_as_grammar){
   using namespace kaldi;
   using namespace fst;
-  using kaldi::int32;
 
   std::string fst_out_str = po.GetArg(po.NumArgs());
   std::string top_fst_str = po.GetArg(1);
@@ -86,7 +85,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace fst;
-    using kaldi::int32;
 
     const char *usage =
         "Construct GrammarFst and write it to disk (or convert it to ConstFst\n"

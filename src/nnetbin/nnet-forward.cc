@@ -60,7 +60,6 @@ int main(int argc, char *argv[]) {
 
     using namespace kaldi;
     using namespace kaldi::nnet1;
-    typedef kaldi::int32 int32;
 
     po.Read(argc, argv);
 
@@ -112,7 +111,7 @@ int main(int argc, char *argv[]) {
     nnet_transf.SetDropoutRate(0.0);
     nnet.SetDropoutRate(0.0);
 
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     BaseFloatMatrixWriter feature_writer(feature_wspecifier);

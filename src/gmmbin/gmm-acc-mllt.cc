@@ -55,7 +55,6 @@ int main(int argc, char *argv[]) {
         accs_wxfilename = po.GetArg(4);
 
     using namespace kaldi;
-    typedef kaldi::int32 int32;
 
     AmDiagGmm am_gmm;
     TransitionModel trans_model;

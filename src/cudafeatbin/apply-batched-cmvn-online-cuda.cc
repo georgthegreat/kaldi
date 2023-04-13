@@ -46,7 +46,6 @@ struct UtteranceDataHandle {
 
 int main(int argc, char *argv[]) {
   try {
-    typedef kaldi::int32 int32;
     using namespace kaldi;
     const char *usage =
         "Apply online cepstral mean (and possibly variance) computation "

@@ -54,7 +54,6 @@ bool AccCmvnStatsWrapper(const std::string &utt,
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    using kaldi::int32;
 
     const char *usage =
         "Compute cepstral mean and variance normalization statistics\n"

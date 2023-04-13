@@ -29,7 +29,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Accumulate stats for GMM training.\n"
@@ -67,7 +66,7 @@ int main(int argc, char *argv[]) {
     gmm_accs.Init(am_gmm, kGmmAll);
 
     double tot_like = 0.0;
-    kaldi::int64 tot_t = 0;
+    int64 tot_t = 0;
 
     SequentialBaseFloatMatrixReader feature_reader(feature_rspecifier);
     RandomAccessInt32VectorReader alignments_reader(alignments_rspecifier);

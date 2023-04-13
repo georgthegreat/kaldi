@@ -38,6 +38,7 @@
 #include "base/kaldi-common.h"
 #include "util/stl-utils.h"
 #include "itf/options-itf.h"
+#include "cudamatrix/kaldi_cudamatrix_Export.h"
 
 namespace kaldi {
 
@@ -82,7 +83,7 @@ struct CuAllocatorOptions {
   }
 };
 
-extern CuAllocatorOptions g_allocator_options;
+extern CuAllocatorOptions kaldi_cudamatrix_EXPORT g_allocator_options;
 
 inline void RegisterCuAllocatorOptions(OptionsItf *po) {
   g_allocator_options.Register(po);
@@ -356,7 +357,7 @@ class CuMemoryAllocator {
 // output to them the free memory and the total memory of the device.
 std::string GetFreeGpuMemory(int64* free, int64* total);
 
-extern CuMemoryAllocator g_cuda_allocator;
+extern CuMemoryAllocator kaldi_cudamatrix_EXPORT g_cuda_allocator;
 
 }  // namespace kaldi
 

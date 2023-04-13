@@ -189,7 +189,6 @@ class PathCoverComputer {
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef kaldi::int32 int32;
     using fst::SymbolTable;
 
     const char *usage =

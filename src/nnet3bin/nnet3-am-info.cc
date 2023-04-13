@@ -26,7 +26,6 @@ int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
     using namespace kaldi::nnet3;
-    typedef kaldi::int32 int32;
 
     const char *usage =
         "Print some text information about an nnet3 neural network, to\n"

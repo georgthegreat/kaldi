@@ -25,7 +25,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef kaldi::int32 int32;
   try {
     const char *usage =
         "Copy a table of lattices (1st argument), but for any keys that appear\n"

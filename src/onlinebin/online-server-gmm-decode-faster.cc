@@ -58,7 +58,6 @@ int main(int argc, char *argv[]) {
     using namespace kaldi;
     using namespace fst;
 
-    typedef kaldi::int32 int32;
 
     // Up to delta-delta derivative features are calculated (unless LDA is used)
     const int32 kDeltaOrder = 2;
