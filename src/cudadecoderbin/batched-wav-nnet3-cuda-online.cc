@@ -46,7 +46,6 @@ using namespace kaldi::cuda_decoder;
 using namespace fst;
 using CorrelationID = CudaOnlinePipelineDynamicBatcher::CorrelationID;
 
-typedef int64 int64;
 
 struct Stream {
   std::shared_ptr<WaveData> wav;

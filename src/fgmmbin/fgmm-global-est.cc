@@ -25,7 +25,6 @@
 int main(int argc, char *argv[]) {
   try {
     using namespace kaldi;
-    typedef int32 int32;
     MleFullGmmOptions gmm_opts;
 
     const char *usage =

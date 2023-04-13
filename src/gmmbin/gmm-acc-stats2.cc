@@ -28,7 +28,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef int64 int64;
   try {
     const char *usage =
         "Accumulate stats for GMM training (from posteriors)\n"

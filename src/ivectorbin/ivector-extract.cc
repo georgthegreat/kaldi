@@ -209,7 +209,6 @@ int32 RunPerSpeaker(const std::string &ivector_extractor_rxfilename,
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef int64 int64;
   try {
     const char *usage =
         "Extract iVectors for utterances, using a trained iVector extractor,\n"

@@ -27,7 +27,6 @@
 
 int main(int argc, char *argv[]) {
   using namespace kaldi;
-  typedef int64 int64;
   try {
     const char *usage =
         "Extract iVectors for utterances every --ivector-period frames, using a trained\n"

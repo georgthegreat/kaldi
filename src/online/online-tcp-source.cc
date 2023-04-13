@@ -24,8 +24,6 @@
 
 namespace kaldi {
 
-typedef int32 int32;
-
 OnlineTcpVectorSource::OnlineTcpVectorSource(int32 socket)
     : socket_desc(socket),
       connected(true),
